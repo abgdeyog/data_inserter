@@ -34,8 +34,8 @@ db = conn.history
 insert_history(db)
 # for index in db.currency.list_indexes():
 #     print(index)
-# cursor = db.history.find()
-# for record in cursor:
-#     print(record)
+cursor = db.history.find()
+for record in cursor:
+    print(record)
 
 
