@@ -22,9 +22,8 @@ def insert_history(db):
     db.currency.create_index("timestamp")
     data_to_insert = [
         {"timestamp": histories[0][day]["time"],
-         "data": [
+         "data":
              {currencies_names[i]: histories[i][day] for i in range(len(currencies_names))}
-         ]
          } for day in range(len(histories[0]))
     ]
     print(len(data_to_insert))
