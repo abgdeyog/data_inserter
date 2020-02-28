@@ -27,6 +27,7 @@ def insert_history(db):
          ]
          } for day in range(len(histories[0]))
     ]
+    print(len(data_to_insert))
     db.currency.insert_many(data_to_insert)
 
 
